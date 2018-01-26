@@ -19,13 +19,14 @@ $(function() {
       }
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
-      $.ajax({
-        url: "https://1931b919.ngrok.io",
-        type: "POST",
-        data: {
-          name: "key",
+      $.post("https://1931b919.ngrok.io",
+        {
+          key: "key" ,
           value: name
         },
+        function(data,status){
+            document.getElementById("message").innerHTML = data;
+        });
         cache: false,
         success: function() {
           // Success message
