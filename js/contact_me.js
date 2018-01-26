@@ -25,6 +25,9 @@ $(function() {
         data: {
           value: name
         },
+        function(data,status){
+           document.getElementById("message").innerHTML = data;
+        });
         cache: false,
         success: function() {
           // Success message
