@@ -25,14 +25,11 @@ $(function() {
         data: {
           value: name
         },
-        function(data){
-           alert(data);
-           document.getElementById("message").innerHTML = data;
-        },
         cache: false,
-        success: function() {
+        success: function(request) {
           // Success message
           $('#success').html("<div class='alert alert-success'>");
+          $("#message").empty().append(request);
           $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
           $('#success > .alert-success')
