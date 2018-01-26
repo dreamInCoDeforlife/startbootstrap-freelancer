@@ -26,7 +26,7 @@ $(function() {
           value: name
         },
         function(data,status){
-           document.getElementById("message").innerHTML = data;
+           document.getElementById("demo").innerHTML = data;
         });
         cache: false,
         success: function() {
