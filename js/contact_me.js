@@ -20,7 +20,7 @@ $(function() {
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
        $.ajax({
-        url: "https://70afc598.ngrok.io",
+        url: "https://4678d65f.ngrok.io",
         type: "POST",
         data: {
           value: name
